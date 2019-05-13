@@ -20,7 +20,7 @@ public class DishController {
 	private DishService service;
 
 	/**
-	 * ·µ»ØËùÓÐ²ËÆ·µÄÁÐ±í
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½Æ·ï¿½ï¿½ï¿½Ð±ï¿½
 	 * 
 	 * @return
 	 */
@@ -39,7 +39,7 @@ public class DishController {
 	}
 
 	/**
-	 * Ò³ÃæÌø×ªÇëÇó
+	 * Ò³ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @return
 	 */
@@ -49,7 +49,7 @@ public class DishController {
 	}
 
 	/**
-	 * ¶©µ¥´¦Àí
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param car
 	 * @return
@@ -58,7 +58,7 @@ public class DishController {
 	@RequestMapping("/dealCar")
 	public Msg dealCar(@RequestParam("car") String car) {
 
-		List<Dish> dishs = new ArrayList<>();
+		List<Dish> dishs = new ArrayList<Dish>();
 		if (!"".equals(car)) {
 			try {
 				car = car.substring(0, car.length() - 1);
@@ -69,7 +69,7 @@ public class DishController {
 					dishs.add(dish);
 				}
 			} catch (Exception e) {
-				System.out.println("³öÏÖÒì³£");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ì³£");
 			}
 		}
 		return Msg.success().add("dishs", dishs);
